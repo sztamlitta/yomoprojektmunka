@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Órafoglalás | Yomo</title>
+  </head>
+  <body class="registration-page">
+    <header class="registration-header">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="index.html">
+              <img src="assets/logo-white.png" alt="Yomo logó" class="logo-white" />
+              <img src="assets/logo-dark.png" alt="Yomo logó" class="logo-dark" />
+            </a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html#home">Főoldal</a></li>
+          <li><a href="index.html#about">Rólunk</a></li>
+          <li><a href="index.html#service">Szolgáltatások</a></li>
+          <li><a href="index.html#class">Órák</a></li>
+          <li><a href="registration.html" aria-current="page">Regisztráció</a></li>
+        </ul>
+        <div class="nav__btns">
+          <a class="btn" href="registration.html" aria-current="page">Regisztráció</a>
+        </div>
+      </nav>
+
+      <div class="section__container registration-hero">
+        <div class="registration-hero__content">
+          <p class="registration-hero__eyebrow">FOGLALJ HELYET</p>
+          <h1>Jelentkezz egy jógaórára</h1>
+          <p>
+            Válaszd ki a számodra megfelelő órát és időpontot, add meg az
+            elérhetőségeidet, és már csak egy lépés választ el a gyakorlástól.
+          </p>
+        </div>
+        <div class="registration-hero__shape" aria-hidden="true">
+          <i class="ri-calendar-check-line"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section__container booking__container" id="booking">
+        <div class="booking__intro">
+          <h2 class="section__header">Órafoglalás</h2>
+          <p>
+            Töltsd ki az alábbi űrlapot. A csillaggal jelölt mezők kitöltése
+            kötelező.
+          </p>
+
+          <div class="booking__benefits">
+            <div class="booking__benefit">
+              <span><i class="ri-user-heart-line"></i></span>
+              <div>
+                <h3>Saját tempódban</h3>
+                <p>Kezdőként és tapasztalt gyakorlóként is találsz megfelelő órát.</p>
+              </div>
+            </div>
+            <div class="booking__benefit">
+              <span><i class="ri-calendar-event-line"></i></span>
+              <div>
+                <h3>Rugalmas időpontok</h3>
+                <p>Válassz olyan napot és kezdési időpontot, amely belefér a napodba.</p>
+              </div>
+            </div>
+            <div class="booking__benefit">
+              <span><i class="ri-heart-pulse-line"></i></span>
+              <div>
+                <h3>Figyelünk rád</h3>
+                <p>Megjegyzésben jelezheted, ha valamire különösen oda kell figyelnünk.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking__form-wrap">
+          <form class="booking__form" id="booking-form">
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name">Név <span>*</span></label>
+                <input type="text" id="name" name="nev" placeholder="Teljes neved" required />
+              </div>
+              <div class="form__group">
+                <label for="email">E-mail <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="pelda@email.hu" required />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label for="phone">Telefonszám <span>*</span></label>
+                <input type="tel" id="phone" name="telefon" placeholder="+36 30 123 4567" required />
+              </div>
+              <div class="form__group">
+                <label for="class-type">Óratípus <span>*</span></label>
+                <select id="class-type" name="class-type" required>
+                  <option value="" selected disabled>Válassz órát</option>
+                  <option value="Kezdő jóga">Kezdő jóga</option>
+                  <option value="Hatha">Hatha</option>
+                  <option value="Gerincjóga">Gerincjóga</option>
+                  <option value="Nyújtás">Nyújtás</option>
+                  <option value="Vinyasa jóga">Vinyasa jóga</option>
+                  <option value="Yin jóga">Yin jóga</option>
+                  <option value="Relaxációs jóga">Relaxációs jóga</option>
+                  <option value="Kismama jóga">Kismama jóga</option>
+                  <option value="Személyi jóga">Személyi jóga</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label for="date">Dátum <span>*</span></label>
+                <input type="date" id="date" name="datum" required />
+              </div>
+              <div class="form__group">
+                <label for="time">Kezdés <span>*</span></label>
+                <select id="time" name="idopont" required>
+                  <option value="" selected disabled>Válassz időpontot</option>
+                  <option value="08:00">08:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="16:00">16:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:30">19:30</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label for="message">Megjegyzés</label>
+              <textarea
+                id="message"
+                name="megjegyzes"
+                rows="5"
+                placeholder="Van bármi, amit az oktatónak érdemes tudnia?"
+></textarea>
+            </div>
+
+            <label class="form__check">
+              <input type="checkbox" id="privacy" required />
+              <span>
+                Elfogadom, hogy a megadott adataimat az órafoglalás kezelése céljából felhasználják. <b>*</b>
+              </span>
+            </label>
+
+            <button class="btn booking__submit" type="submit">
+              Jelentkezem az órára
+              <i class="ri-arrow-right-line"></i>
+            </button>
+
+            <div class="booking__message" id="booking-message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <section class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <a href="index.html" class="footer__logo">
+            <img src="assets/logo-white.png" alt="Yomo logó" />
+          </a>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:+36301234567">
+                <span><i class="ri-phone-line"></i></span> +36 30 123 4567
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-line"></i></span> Budapest, Magyarország
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@yomo.hu">
+                <span><i class="ri-mail-line"></i></span> info@yomo.hu
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Gyorslinkek</h4>
+          <ul class="footer__links">
+            <li><a href="index.html#home">Főoldal</a></li>
+            <li><a href="index.html#about">Rólunk</a></li>
+            <li><a href="index.html#service">Szolgáltatások</a></li>
+            <li><a href="index.html#class">Órák</a></li>
+            <li><a href="registration.html">Regisztráció</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Nyitvatartás</h4>
+          <ul class="footer__links">
+            <li>Hétfő – Péntek: 7:00 – 21:00</li>
+            <li>Szombat: 8:00 – 18:00</li>
+            <li>Vasárnap: 8:00 – 14:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">Yomo – Jóga és egyensúly.</div>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+    <script src="registration.js"></script>
+  </body>
+</html>

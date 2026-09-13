@@ -1,0 +1,1104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #8fa58a;
+  --secondary-color: #725c49;
+  --text-dark: #4f6251;
+  --text-light: #747b72;
+  --extra-light: #e6ddd0;
+  --white: #fffdf9;
+  --gradient-1: linear-gradient(to right, #d4c3ac, #a9aa95, #8fa58a);
+  --gradient-2: linear-gradient(to right, #725c49, #8fa58a, #d4c3ac);
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  position: relative;
+  isolation: isolate;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  max-width: 400px;
+}
+
+.section__header::before {
+  position: absolute;
+  top: -3rem;
+  width: max-content;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 6rem;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--text-dark);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  overflow: hidden;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--text-dark);
+}
+
+.nav__logo img {
+  max-width: 175px;
+}
+
+.nav__logo .logo-dark {
+  display: none;
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--text-dark);
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(100%);
+}
+
+.nav__links a {
+  font-weight: 600;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+
+.nav__btns {
+  display: none;
+}
+
+.header__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.header__container h1 {
+  position: relative;
+  isolation: isolate;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 5rem;
+  color: var(--secondary-color);
+  font-style: italic;
+  text-align: center;
+}
+
+.header__container h1::before {
+  position: absolute;
+  content: "TALÁLD MEG AZ EGYENSÚLYT";
+  top: -5rem;
+  left: -5rem;
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 10rem;
+  color: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+}
+
+.header__container h2 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 5rem;
+  color: var(--text-dark);
+  font-style: italic;
+  text-align: center;
+}
+
+.header__container p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.header__btn {
+  text-align: center;
+}
+
+.header__image img {
+  max-width: 300px;
+  margin-inline: auto;
+}
+
+.about {
+  overflow: hidden;
+}
+
+.about__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.about__image {
+  position: relative;
+  isolation: isolate;
+}
+
+.about__image::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-75%, -50%);
+  width: calc(100% - 5rem);
+  aspect-ratio: 1;
+  background-image: var(--gradient-2);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.about__image img {
+  max-width: 550px;
+  margin-inline: auto;
+}
+
+.about__content .section__header::before {
+  content: "Rólunk";
+}
+
+.about__content p {
+  margin-top: 1rem;
+  color: var(--text-light);
+}
+
+.about__content p:nth-child(3) {
+  margin-bottom: 2rem;
+}
+
+.service {
+  background-color: var(--text-dark);
+  overflow: hidden;
+}
+
+.service__container .section__header {
+  color: var(--white);
+}
+
+.service__container .section__header::before {
+  content: "Szolgáltatások";
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.service__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.service__card span {
+  font-size: 2rem;
+  font-weight: 800;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--white);
+  opacity: 0.75;
+}
+
+.service__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.service__card p {
+  color: var(--text-light);
+}
+
+.service__image {
+  display: none;
+}
+
+.popular {
+  overflow: hidden;
+}
+
+.popular__container .section__header::before {
+  content: "Népszerű órák";
+}
+
+.popular__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.popular__card {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--extra-light);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.popular__card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popular__card div {
+  flex: 1;
+}
+
+.popular__card h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.popular__card .popular__book {
+  width: 2.6rem;
+  height: 2.6rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popular__card .popular__book:hover,
+.popular__card .popular__book:focus-visible {
+  background-color: var(--primary-color);
+  color: var(--white);
+  outline: none;
+}
+
+.popular__card:hover .popular__book {
+  transform: translateX(10px);
+}
+
+.popular__card p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.facility__container {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  overflow: hidden;
+}
+
+.facility__content {
+  padding: 5rem 1rem;
+}
+
+.facility__content::before {
+  position: absolute;
+  content: "";
+  background-image: var(--gradient-2);
+  grid-area: 1/1/3/2;
+  inset: 0;
+  z-index: -1;
+}
+
+.facility__content .section__header {
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.facility__content .section__header::before {
+  content: "Stúdiónk";
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.facility__content p {
+  color: var(--white);
+}
+
+.facility__content p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.mentor__container {
+  overflow: hidden;
+}
+
+.mentor__container .section__header::before {
+  content: "Oktatóink";
+}
+
+.mentor__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 4rem 1rem;
+}
+
+.mentor__card img {
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+}
+
+.mentor__card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.mentor__card p {
+  font-weight: 500;
+  color: var(--text-light);
+  text-align: center;
+}
+.footer {
+  background-color: var(--text-dark);
+}
+
+.footer__container {
+  display: grid;
+  gap: 4rem 2rem;
+}
+
+.footer__logo img {
+  margin-bottom: 2rem;
+  max-width: 250px;
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.footer__links {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links :is(li, a) {
+  color: var(--text-light);
+}
+
+.footer__links a:hover {
+  color: var(--white);
+}
+
+.footer__links a span {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.footer__bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-align: center;
+  border-top: 1px solid var(--text-light);
+}
+
+@media (width > 540px) {
+  .service__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .popular__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mentor__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  header {
+    position: relative;
+    isolation: isolate;
+  }
+
+  header::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0;
+    width: 65%;
+    aspect-ratio: 1;
+    background-image: var(--gradient-1);
+    border-radius: 100%;
+    z-index: -1;
+  }
+
+  nav {
+    position: static;
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav__header {
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__logo img {
+    max-width: 200px;
+  }
+
+  .nav__logo .logo-dark {
+    display: flex;
+  }
+
+  .nav__logo .logo-white {
+    display: none;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    width: fit-content;
+    padding: 0;
+    flex-direction: row;
+    background-color: transparent;
+    transform: none !important;
+  }
+
+  .nav__links a {
+    color: var(--text-dark);
+  }
+
+  .nav__links li:last-child {
+    display: none;
+  }
+
+  .nav__btns {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header__container {
+    padding-top: 0;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .header__container :is(h1, h2, p, .header__btn) {
+    text-align: left;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .popular__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .facility__container {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, calc(var(--max-width) / 2))
+      minmax(0, calc(var(--max-width) / 2))
+      minmax(0, 1fr);
+  }
+
+  .facility__image {
+    grid-area: 1/1/2/3;
+  }
+
+  .facility__image img {
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+  }
+
+  .facility__content {
+    grid-area: 1/3/2/4;
+  }
+
+  .facility__content::before {
+    grid-area: 1/2/2/5;
+  }
+
+  .mentor__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+.footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width > 1024px) {
+  .service__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service__image {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    grid-area: 1/2/3/3;
+  }
+
+  .service__image img {
+    position: absolute;
+    top: -10rem;
+  }
+
+  .popular__card {
+    padding: 1.5rem;
+  }
+
+  .facility__content {
+    padding-inline: 4rem 1rem;
+  }
+
+  .mentor__grid {
+    gap: 4rem 2rem;
+  }
+}
+/* ================================
+   Registration page
+   ================================ */
+.registration-page {
+  background-color: #f7f3eb;
+}
+
+.registration-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fffdf9 0%, #f3ede3 55%, #e8eee5 100%);
+}
+
+.registration-header::before {
+  position: absolute;
+  content: "";
+  width: 38rem;
+  height: 38rem;
+  right: -15rem;
+  bottom: -20rem;
+  border-radius: 100%;
+  background-image: var(--gradient-1);
+  opacity: 0.75;
+  z-index: -1;
+}
+
+.registration-hero {
+  min-height: 420px;
+  padding-top: 8rem;
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+}
+
+.registration-hero__eyebrow {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.22rem;
+  color: var(--primary-color);
+}
+
+.registration-hero__content h1 {
+  max-width: 700px;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 1.05;
+  font-style: italic;
+  color: var(--text-dark);
+}
+
+.registration-hero__content > p:last-child {
+  max-width: 620px;
+  margin-top: 1.5rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.registration-hero__shape {
+  display: none;
+}
+
+.booking__container {
+  display: grid;
+  gap: 3rem;
+}
+
+.booking__intro .section__header::before {
+  content: "Foglalás";
+}
+
+.booking__intro > p {
+  max-width: 480px;
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.booking__benefits {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.booking__benefit {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.booking__benefit > span {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.35rem;
+  color: var(--text-dark);
+  background-image: var(--gradient-2);
+}
+
+.booking__benefit h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.booking__benefit p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.booking__form-wrap {
+  position: relative;
+  isolation: isolate;
+}
+
+.booking__form-wrap::before {
+  position: absolute;
+  content: "";
+  inset: 1rem -0.75rem -0.75rem 1rem;
+  border-radius: 24px;
+  background-image: var(--gradient-2);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.booking__form {
+  padding: 1.5rem;
+  border: 1px solid var(--extra-light);
+  border-radius: 24px;
+  background-color: var(--white);
+  box-shadow: 0 20px 60px rgba(2, 6, 23, 0.08);
+}
+
+.form__row {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.form__group {
+  margin-bottom: 1.25rem;
+}
+
+.form__group label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form__group label span,
+.form__check b {
+  color: #9a5f4b;
+}
+
+.form__group :is(input, select, textarea) {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--extra-light);
+  outline: none;
+  border-radius: 8px;
+  font: inherit;
+  color: var(--text-dark);
+  background-color: #fffdf9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form__group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form__group :is(input, select, textarea):focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(143, 165, 138, 0.18);
+}
+
+.form__group :is(input, textarea)::placeholder {
+  color: #a49d91;
+}
+
+.form__check {
+  margin: 0.25rem 0 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-light);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  cursor: pointer;
+}
+
+.form__check input {
+  margin-top: 0.2rem;
+  accent-color: var(--primary-color);
+}
+
+.booking__submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.booking__message {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.booking__message.show {
+  display: block;
+  color: #4f6251;
+  background-color: #edf2e9;
+  border: 1px solid #cbd8c6;
+}
+
+@media (width > 640px) {
+  .form__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .booking__form {
+    padding: 2rem;
+  }
+}
+
+@media (width > 768px) {
+  .registration-hero {
+    min-height: 480px;
+    padding-top: 3rem;
+    grid-template-columns: 1.4fr 0.6fr;
+  }
+
+  .registration-hero__shape {
+    justify-self: end;
+    width: 250px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 6rem;
+    color: var(--white);
+    background-image: var(--gradient-2);
+    box-shadow: 0 25px 60px rgba(2, 6, 23, 0.12);
+  }
+
+  .booking__container {
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+    gap: 5rem;
+  }
+}
+
+/* ================================
+   Registration page - class guide
+   ================================ */
+.class-guide {
+  background-color: var(--white);
+}
+
+.class-guide__container {
+  padding-bottom: 2rem;
+}
+
+.class-guide__heading {
+  max-width: 720px;
+  margin-bottom: 2.5rem;
+}
+
+.class-guide__eyebrow {
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18rem;
+  color: var(--primary-color);
+}
+
+.class-guide__heading .section__header::before {
+  content: "Órák";
+}
+
+.class-guide__heading > p:last-child {
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+.class-guide__grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.class-guide__card {
+  min-height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--extra-light);
+  border-radius: 20px;
+  background-color: #fffdf9;
+  box-shadow: 0 12px 35px rgba(2, 6, 23, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.class-guide__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(143, 165, 138, 0.45);
+  box-shadow: 0 18px 45px rgba(2, 6, 23, 0.09);
+}
+
+.class-guide__icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  background-image: var(--gradient-2);
+}
+
+.class-guide__card h3 {
+  margin-bottom: 0.65rem;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.class-guide__card p {
+  margin-bottom: 1.25rem;
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.class-guide__select {
+  width: fit-content;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.class-guide__select i {
+  transition: transform 0.3s;
+}
+
+.class-guide__select:hover i {
+  transform: translateX(4px);
+}
+
+@media (width > 640px) {
+  .class-guide__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 960px) {
+  .class-guide__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ================================
+   Natural yoga palette: sage + beige + warm brown
+   ================================ */
+body {
+  background-color: #faf8f3;
+  color: #4f6251;
+}
+
+header,
+.about,
+.popular,
+.mentor {
+  background-color: #faf8f3;
+}
+
+.service,
+.footer {
+  background-color: #4f6251;
+}
+
+.service__card p,
+.footer__links :is(li, a),
+.footer__bar {
+  color: #dcd6ca;
+}
+
+.footer__bar {
+  border-top-color: rgba(220, 214, 202, 0.45);
+}
+
+.btn {
+  background-color: #725c49;
+}
+
+.btn:hover {
+  background-color: #4f6251;
+}
+
+.nav__links a:hover,
+.popular__card .popular__book,
+.registration-hero__eyebrow,
+.class-guide__eyebrow,
+.class-guide__select {
+  color: #725c49;
+}
+
+.popular__card .popular__book:hover,
+.popular__card .popular__book:focus-visible {
+  background-color: #725c49;
+  color: #fffdf9;
+}
+
+.popular__card,
+.booking__form,
+.class-guide__card {
+  background-color: #fffdf9;
+}
+
+.registration-page,
+.class-guide {
+  background-color: #f7f3eb;
+}
+
+.form__group :is(input, select, textarea) {
+  background-color: #fffdf9;
+}
